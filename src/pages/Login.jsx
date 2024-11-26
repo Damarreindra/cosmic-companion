@@ -9,21 +9,14 @@ function Register() {
     const signInWithGoogle = async () => {
         try {
           const result = await signInWithPopup(auth, provider);
+          localStorage.setItem('uid', result.user.uid)
           navigate("/home")
         } catch (error) {
           console.error("Error signing in with Google:", error);
         }
       };
 
-
-      const logOut = async () => {
-        try {
-          await signOut(auth);
-          console.log("User signed out");
-        } catch (error) {
-          console.error("Error signing out:", error);
-        }
-      };
+ 
 
 
   return (
