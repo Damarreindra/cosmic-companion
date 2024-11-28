@@ -4,6 +4,8 @@ import { checkAvail } from '../utils/Store/geminiSlice'
 import Layout from '../components/Layout'
 import MainMenu from '../components/MainMenu';
 import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 function Home() {
@@ -30,7 +32,7 @@ function Home() {
             }
             <Hero/>
         <MainMenu/>
-
+            <Footer/>
         </Layout>
     )
 }

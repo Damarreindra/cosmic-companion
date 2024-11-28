@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import geminiReducer from './geminiSlice';
-import quoteReducer from './quoteSlice';
+import cosmicReducer from './cosmicSlice';
 import journalReducer from './journalSlice';
 
 
 export const store = configureStore({
   reducer: {
     gemini: geminiReducer,
-    quote: quoteReducer,
+    cosmic: cosmicReducer,
     journal: journalReducer
   },
 });

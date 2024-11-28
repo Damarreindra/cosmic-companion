@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from "react";
 
-function StatusAlert({text, variant}) {
-   const [close, setClose] = useState(false)
-   useEffect(() => {
-    setClose(false);
+function StatusAlert({ message, onClose }) {
+  useEffect(() => {
     const timer = setTimeout(() => {
-      setClose(true);
-    }, 1000);
+      onClose();
+    }, 3000);
+
     return () => clearTimeout(timer);
-  }, [text]); 
+  }, [message, onClose]);
+  
   return (
-    <div
-    className={`absolute top-16 right-0 px-12 py-6 text-white font-bold overflow-hidden transition-all duration-300 
-    ${variant === "success" ? "bg-green-500" : "bg-red-500"} 
-    ${close ? "h-0 w-0 p-0 opacity-0" : "opacity-100"}`}
-  >        {text}
+    <div className="absolute right-36 top-20 bg-green-500 font-bold text-white rounded p-4">
+      <p>{message}</p>
     </div>
-  )
+  );
 }
 
-export default StatusAlert
+export default StatusAlert;

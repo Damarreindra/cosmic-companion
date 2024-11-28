@@ -4,12 +4,11 @@ import Footer from './Footer'
 
 function Layout({children}) {
   return (
-    <div className='justify-center items-center bg-gradient-to-tr relative from-base to-primary'>
+    <div className='bg-gradient-to-tr relative  from-base to-primary font-open'>
     <Navbar />
-    <main className='px-24 py-12 '>
+    <main className='xl:px-36 xl:py-5 px-8 py-3'>
     {children}
     </main>
-  
 </div>
   )
 }

@@ -25,11 +25,6 @@ export const checkAvail = createAsyncThunk(
 
 
 
-
-
-
-
-
 const geminiSlice = createSlice({
     name: "gemini",
     initialState: {
